@@ -152,7 +152,7 @@ class ViewController: UIViewController {
 `Controller`는 `View`와 `Model` 모두를 포함하고 있기 때문에 한 화면에 에 `View`가 많아질 수록 포함해야하는 `View`와 `Model`많아지게 됩니다. 이 때문에 `Controller`가 비대해질 수 있다는 것을 알 수 있습니다.
 
 단순하고 구현이 쉽다는 장점이 있지만 `Controller`의 비중이 높아지는 단점이 있습니다.
-또한 이벤트 핸들링을 Controller에서 구현하다보니 테스트 코드 작성도 힘들 것으로 예상됩니다.
+또한 이벤트 핸들링을 `Controller`에서 구현하다보니 테스트 코드 작성도 힘들 것으로 예상됩니다.
 이 부분은 추후에 다시 설명하겠습니다.
 
 ## MVVM
