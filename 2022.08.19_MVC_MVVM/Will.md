@@ -12,7 +12,7 @@
 ### Controller
 **`View`와 `Model`을 포함**하고 있고 **View에 대한 인터렉션을 어떻게 처리할 지(handling)에 대한 로직을 정의**합니다. `View`와 `Model`은 `Controller`의 멤버(변수, 함수)에 대해서 알지 못합니다.
 
-예시를 들어보겠습니다.
+<details><summary>예시를 들어보겠습니다.</summary>
 
 
 ```swift
@@ -139,6 +139,9 @@ class ViewController: UIViewController {
   }
 }
 ```
+</details>
+
+<br>
 
 미리보기는 다음과 같습니다.
 
