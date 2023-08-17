@@ -146,9 +146,9 @@ class ViewController: UIViewController {
 
 
 
-예시에서도 보면 알 수 있듯이 `Model`은 `View`에 표시할 데이터를 저장하고 있고,`View`는 `Model`의 데이터를 화면에 표시합니다.
+예시에서도 보면 알 수 있듯이 `Model`은 `View`에 표시할 데이터를 저장하고 있고,`View`는 `Model`의 데이터를 화면에 표시합니다.  
 또한 `Controller`는 `Model`과 `View`를 객체를 생성하고 `View`에서의 Event를 핸들링(어떻게 처리)합니다.
-`Model`은 비즈니스 로직을 포함하고 있고 `View`는 프레젠테이션 로직을, `Controller`는 이 모두를 가지는 것을 알 수 있습니다.
+`Model`은 비즈니스 로직을 포함하고 있고 `View`는 프레젠테이션 로직을, `Controller`는 이 모두를 가지는 것을 알 수 있습니다.  
 `Controller`는 `View`와 `Model` 모두를 포함하고 있기 때문에 한 화면에 에 `View`가 많아질 수록 포함해야하는 `View`와 `Model`많아지게 됩니다. 이 때문에 `Controller`가 비대해질 수 있다는 것을 알 수 있습니다.
 
 단순하고 구현이 쉽다는 장점이 있지만 `Controller`의 비중이 높아지는 단점이 있습니다.
