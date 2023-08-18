@@ -10,7 +10,8 @@
 앱의 `Presentation logic`을 담당하고 있고 **`Model`의 데이터를 표시**합니다.
 
 ### Controller
-**`View`와 `Model`을 포함**하고 있고 **View에 대한 인터렉션을 어떻게 처리할 지(handling)에 대한 로직을 정의**합니다. `View`와 `Model`은 `Controller`의 멤버(변수, 함수)에 대해서 알지 못합니다.
+**`View`와 `Model`을 포함**하고 있고 **View에 대한 인터렉션을 어떻게 처리할 지(handling)에 대한 로직을 정의**합니다.  
+`View`와 `Model`은 `Controller`의 멤버(변수, 함수)에 대해서 알지 못합니다.
 
 도식화하면 다음과 같습니다.
 
