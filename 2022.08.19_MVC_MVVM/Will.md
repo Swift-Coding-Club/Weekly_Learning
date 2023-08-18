@@ -158,4 +158,74 @@ class ViewController: UIViewController {
 또한 이벤트 핸들링을 `Controller`에서 구현하다보니 테스트 코드 작성도 힘들 것으로 예상됩니다.
 이 부분은 추후에 다시 설명하겠습니다.
 
+### UI Test Code
+UI 테스트 코드는 MVVM에도 동일하게 View 논리 컴포넌트가 있어서 코드는 비슷하게 작성됩니다.
+
+<details><summary>예시 코드</summary>
+
+```swift
+//  SwiftGitTestUITests
+import XCTest
+import Foundation
+@testable import SwiftGitTest
+
+final class SwiftGitTestUITests: XCTestCase {
+    
+    private var app: XCUIApplication!
+    private var searchTextField: XCUIElement!
+    private var searchButton: XCUIElement!
+    private var resultLabel: XCUIElement!
+    
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        app = XCUIApplication()
+        searchTextField = app.textFields["searchTextField"]
+        searchButton = app.buttons["searchButton"]
+        resultLabel = app.staticTexts["resultLabel"]
+        
+        app.launch()
+        
+        continueAfterFailure = false
+    }
+    
+    override func tearDownWithError() throws {
+        app = nil
+        try super.tearDownWithError()
+    }
+    
+    func testSearchSuccess() throws {
+        let input = "will"
+        
+        searchTextField.tap()
+        
+        input.forEach {
+            app.keys[String($0)].tap()
+        }
+        
+        self.searchButton.tap()
+        
+        Thread.sleep(forTimeInterval: 1)
+        
+        XCTAssertEqual(input, resultLabel.label)
+    }
+    
+    func testSearchTextDoNotMatchResultlabel() throws {
+        let input = "will"
+        
+        searchTextField.tap()
+        
+        input.forEach {
+            app.keys[String($0)].tap()
+        }
+        
+        self.searchButton.tap()
+        
+        Thread.sleep(forTimeInterval: 1)
+        
+        XCTAssertNotEqual(input, "error")
+    }
+}
+```
+</details>
+
 ## MVVM
