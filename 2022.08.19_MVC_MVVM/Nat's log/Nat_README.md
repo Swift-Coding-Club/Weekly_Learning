@@ -2,17 +2,15 @@
 
 MVC 패턴은 들어봤었는데, MVVM 패턴은 뭘까? 개념도 코드에 적용도 할 수 없었기에 기초부터 배워보고 싶었다. 
 
-<!-- ![MVVM 의 구조](./images/MVVM.png "MVVM의 구조"){: width="100" height="100"}
-![Viper의 구성요소](./images/viper.png "Viper의 구성요소"){: width="100" height="100"} -->
 <br>
 <div display="block">
-<img src="./images/MVVM.png"  width="50%" height="50%" align = left>
-<img src="./images/viper.png"  width="50%" height="50%" align = right>
-</div>
+<img src="./images/MVVM.png"  width="50%" height="30%" align = left>
+<img src="./images/viper.png"  width="50%" height="30%" align = right>
+</div><br>
 
-<br>
 
-<br>
+<br> 
+<p></p>
 
 ## **MVVM**
 모델, 뷰, 뷰모델 패턴은 UI 와 도메인 사이의 깔끔한 관심사의 분리를 제공한다. 클린 아키텍처와 함께 사용하면 프리젠테이션 레이어와 UI 레이어 간의 문제를 분리하는 데 도움이 된다. 동일한 ViewModel 과 함께 다양한 뷰 구현을 사용할 수 있다.
